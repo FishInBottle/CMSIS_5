@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
+
 #include "Driver_Flash.h"
 
 #define ARM_FLASH_DRV_VERSION    ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0) /* driver version */
@@ -73,6 +73,7 @@ static ARM_FLASH_CAPABILITIES ARM_Flash_GetCapabilities(void)
 
 static int32_t ARM_Flash_Initialize(ARM_Flash_SignalEvent_t cb_event)
 {
+    uint32_t reg_addr = ARM_COMMON_GetRegBase(ARM_DRV_FLASH);
 }
 
 static int32_t ARM_Flash_Uninitialize(void)

@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
+
 #include "Driver_CAN.h"
 
 #define ARM_CAN_DRV_VERSION ARM_DRIVER_VERSION_MAJOR_MINOR(1,0) // CAN driver version
@@ -78,6 +78,7 @@ static int32_t ARM_CAN_Initialize (ARM_CAN_SignalUnitEvent_t   cb_unit_event,
 
   // Add code for pin, memory, RTX objects initialization
   // ..
+  uint32_t reg_addr = ARM_COMMON_GetRegBase(ARM_DRV_CAN);
 
   can_driver_initialized = 1U;
 

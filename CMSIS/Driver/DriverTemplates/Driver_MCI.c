@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
+
 #include "Driver_MCI.h"
 
 #define ARM_MCI_DRV_VERSION    ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0) /* driver version */
@@ -76,6 +76,7 @@ static ARM_MCI_CAPABILITIES ARM_MCI_GetCapabilities(void)
 
 static int32_t ARM_MCI_Initialize(ARM_MCI_SignalEvent_t cb_event)
 {
+    uint32_t reg_addr = ARM_COMMON_GetRegBase(ARM_DRV_MCI);
 }
 
 static int32_t ARM_MCI_Uninitialize(void)

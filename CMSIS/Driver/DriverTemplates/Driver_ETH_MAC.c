@@ -63,6 +63,7 @@ static ARM_ETH_MAC_CAPABILITIES ARM_ETH_MAC_GetCapabilities(void)
 
 static int32_t ARM_ETH_MAC_Initialize(ARM_ETH_MAC_SignalEvent_t cb_event)
 {
+    uint32_t reg_addr = ARM_COMMON_GetRegBase(ARM_DRV_ETH_MAC);
 }
 
 static int32_t ARM_ETH_MAC_Uninitialize(void)

@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
+
 #include "Driver_I2C.h"
 
 #define ARM_I2C_DRV_VERSION    ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0) /* driver version */
@@ -47,6 +47,7 @@ static ARM_I2C_CAPABILITIES ARM_I2C_GetCapabilities(void)
 
 static int32_t ARM_I2C_Initialize(ARM_I2C_SignalEvent_t cb_event)
 {
+    uint32_t reg_addr = ARM_COMMON_GetRegBase(ARM_DRV_I2C);
 }
 
 static int32_t ARM_I2C_Uninitialize(void)

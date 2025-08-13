@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
+
 #include "Driver_ETH_PHY.h"
 
 #define ARM_ETH_PHY_DRV_VERSION    ARM_DRIVER_VERSION_MAJOR_MINOR(1, 0) /* driver version */
@@ -37,6 +37,7 @@ static ARM_DRIVER_VERSION ARM_ETH_PHY_GetVersion(void)
 
 static int32_t ARM_ETH_PHY_Initialize(ARM_ETH_PHY_Read_t fn_read, ARM_ETH_PHY_Write_t fn_write)
 {
+    uint32_t reg_addr = ARM_COMMON_GetRegBase(ARM_DRV_ETH_PHY);
 }
 
 static int32_t ARM_ETH_PHY_Uninitialize(void)
